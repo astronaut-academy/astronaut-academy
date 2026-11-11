@@ -152,39 +152,3 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
 
     alert("You have logged out successfully. 🚀");
 });
-/* Relaxing galaxy background */
-body {
-    background:
-        radial-gradient(ellipse at 20% 20%, #34245f 0%, transparent 45%),
-        radial-gradient(ellipse at 80% 80%, #172c59 0%, transparent 50%),
-        linear-gradient(135deg, #050817, #10132d, #080d20);
-    background-attachment: fixed;
-}
-
-/* Soft glowing atmosphere */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at 50% 40%, rgba(151, 120, 255, 0.12), transparent 45%),
-        radial-gradient(circle at 15% 80%, rgba(80, 170, 255, 0.10), transparent 40%);
-    animation: galaxyGlow 12s ease-in-out infinite alternate;
-    z-index: -1;
-}
-
-@keyframes galaxyGlow {
-    from { opacity: 0.5; }
-    to { opacity: 1; }
-}
-
-/* Gentle movement for existing planets */
-.planet {
-    animation: floatPlanet 18s ease-in-out infinite alternate;
-}
-
-@keyframes floatPlanet {
-    from { transform: translateY(-12px) rotate(0deg); }
-    to { transform: translateY(12px) rotate(8deg); }
-}
