@@ -399,3 +399,42 @@ input[type="checkbox"] {
     position: relative;
     z-index: 2;
 }
+.astronaut {
+    position: fixed;
+    font-size: 45px;
+    z-index: 0;
+    pointer-events: none;
+    animation: floatAstronaut 12s ease-in-out infinite alternate;
+}
+
+.astronaut-one {
+    top: 15%;
+    left: 5%;
+    animation-duration: 10s;
+}
+
+.astronaut-two {
+    top: 55%;
+    right: 8%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.astronaut-three {
+    bottom: 8%;
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+@keyframes floatAstronaut {
+    0% {
+        transform: translate(0, 0) rotate(-15deg);
+    }
+    50% {
+        transform: translate(40px, -35px) rotate(15deg);
+    }
+    100% {
+        transform: translate(-20px, 30px) rotate(-10deg);
+    }
+}
